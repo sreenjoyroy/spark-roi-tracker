@@ -48,7 +48,6 @@ export const DashboardFilters = ({ filters, onFiltersChange }: DashboardFiltersP
             <SelectValue placeholder="All Brands" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="">All Brands</SelectItem>
             <SelectItem value="HealthKart">HealthKart</SelectItem>
             <SelectItem value="Muscletech">Muscletech</SelectItem>
             <SelectItem value="Optimum">Optimum Nutrition</SelectItem>
@@ -64,7 +63,6 @@ export const DashboardFilters = ({ filters, onFiltersChange }: DashboardFiltersP
             <SelectValue placeholder="All Products" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="">All Products</SelectItem>
             <SelectItem value="Whey Protein">Whey Protein</SelectItem>
             <SelectItem value="BCAA">BCAA</SelectItem>
             <SelectItem value="Multivitamins">Multivitamins</SelectItem>
@@ -81,7 +79,6 @@ export const DashboardFilters = ({ filters, onFiltersChange }: DashboardFiltersP
             <SelectValue placeholder="All Platforms" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="">All Platforms</SelectItem>
             <SelectItem value="Instagram">Instagram</SelectItem>
             <SelectItem value="YouTube">YouTube</SelectItem>
             <SelectItem value="TikTok">TikTok</SelectItem>
@@ -99,7 +96,6 @@ export const DashboardFilters = ({ filters, onFiltersChange }: DashboardFiltersP
             <SelectValue placeholder="All Types" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="">All Types</SelectItem>
             <SelectItem value="Fitness">Fitness</SelectItem>
             <SelectItem value="Nutrition">Nutrition</SelectItem>
             <SelectItem value="Wellness">Wellness</SelectItem>
