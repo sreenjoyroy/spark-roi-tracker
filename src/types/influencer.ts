@@ -8,6 +8,8 @@ export interface Influencer {
   email: string;
   joinDate: string;
   status: 'Active' | 'Inactive' | 'Pending';
+  avatar?: string;
+  bio?: string;
 }
 
 export interface Post {

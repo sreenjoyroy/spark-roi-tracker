@@ -12,7 +12,8 @@ import { CampaignPerformance } from './CampaignPerformance';
 import { InsightsPanel } from './InsightsPanel';
 import { DataUpload } from './DataUpload';
 import { ExportTools } from './ExportTools';
-import { TrendingUp, Users, Target, DollarSign, BarChart3, FileUp } from 'lucide-react';
+import { WelcomeSection, SuccessStories, CommunityHighlights } from './HumanizedComponents';
+import { TrendingUp, Users, Target, DollarSign, BarChart3, FileUp, Heart, Sparkles } from 'lucide-react';
 
 export const Dashboard = () => {
   const [filters, setFilters] = useState<DashboardFilters>({});
@@ -56,11 +57,11 @@ export const Dashboard = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary-glow rounded-lg flex items-center justify-center">
-                <TrendingUp className="w-5 h-5 text-primary-foreground" />
+                <Heart className="w-5 h-5 text-primary-foreground" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-foreground">HealthKart ROI Tracker</h1>
-                <p className="text-sm text-muted-foreground">Influencer Campaign Analytics Dashboard</p>
+                <h1 className="text-2xl font-bold text-foreground">HealthKart Creator Hub ✨</h1>
+                <p className="text-sm text-muted-foreground">Where amazing creators meet incredible results</p>
               </div>
             </div>
             <div className="flex items-center space-x-2">
@@ -96,8 +97,8 @@ export const Dashboard = () => {
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           <TabsList className="grid w-full grid-cols-6 mb-6">
             <TabsTrigger value="overview" className="flex items-center space-x-2">
-              <BarChart3 className="w-4 h-4" />
-              <span>Overview</span>
+              <Heart className="w-4 h-4" />
+              <span>Home</span>
             </TabsTrigger>
             <TabsTrigger value="campaigns" className="flex items-center space-x-2">
               <Target className="w-4 h-4" />
@@ -105,27 +106,33 @@ export const Dashboard = () => {
             </TabsTrigger>
             <TabsTrigger value="influencers" className="flex items-center space-x-2">
               <Users className="w-4 h-4" />
-              <span>Influencers</span>
+              <span>Our Creators</span>
             </TabsTrigger>
             <TabsTrigger value="roi" className="flex items-center space-x-2">
-              <DollarSign className="w-4 h-4" />
-              <span>ROI Analysis</span>
+              <TrendingUp className="w-4 h-4" />
+              <span>Performance</span>
             </TabsTrigger>
             <TabsTrigger value="insights" className="flex items-center space-x-2">
-              <TrendingUp className="w-4 h-4" />
+              <Sparkles className="w-4 h-4" />
               <span>Insights</span>
             </TabsTrigger>
             <TabsTrigger value="upload" className="flex items-center space-x-2">
               <FileUp className="w-4 h-4" />
-              <span>Data Upload</span>
+              <span>Data</span>
             </TabsTrigger>
           </TabsList>
 
           <TabsContent value="overview" className="space-y-6">
+            <WelcomeSection />
             <OverviewCards data={filteredData} />
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <ROIChart data={filteredData.roiMetrics} />
-              <CampaignPerformance campaigns={filteredData.campaigns} />
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div className="lg:col-span-2">
+                <ROIChart data={filteredData.roiMetrics} />
+              </div>
+              <div className="space-y-6">
+                <CommunityHighlights />
+                <SuccessStories />
+              </div>
             </div>
           </TabsContent>
 

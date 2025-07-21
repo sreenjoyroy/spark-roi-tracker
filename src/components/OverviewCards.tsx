@@ -29,7 +29,7 @@ export const OverviewCards = ({ data }: OverviewCardsProps) => {
       <Card className="relative overflow-hidden">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-sm font-medium text-muted-foreground">
-            Total Revenue
+            💰 Revenue Generated
           </CardTitle>
           <DollarSign className="h-4 w-4 text-primary" />
         </CardHeader>
@@ -50,7 +50,7 @@ export const OverviewCards = ({ data }: OverviewCardsProps) => {
       <Card className="relative overflow-hidden">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-sm font-medium text-muted-foreground">
-            Average ROI
+            🚀 Success Rate
           </CardTitle>
           <TrendingUp className="h-4 w-4 text-success" />
         </CardHeader>
@@ -71,7 +71,7 @@ export const OverviewCards = ({ data }: OverviewCardsProps) => {
       <Card className="relative overflow-hidden">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-sm font-medium text-muted-foreground">
-            Total Orders
+            🛍️ Happy Customers
           </CardTitle>
           <BarChart3 className="h-4 w-4 text-chart-3" />
         </CardHeader>
@@ -92,7 +92,7 @@ export const OverviewCards = ({ data }: OverviewCardsProps) => {
       <Card className="relative overflow-hidden">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-sm font-medium text-muted-foreground">
-            Active Campaigns
+            🎯 Live Campaigns
           </CardTitle>
           <Target className="h-4 w-4 text-chart-4" />
         </CardHeader>
@@ -102,7 +102,7 @@ export const OverviewCards = ({ data }: OverviewCardsProps) => {
           </div>
           <div className="flex items-center space-x-2 text-xs">
             <Badge variant="secondary" className="bg-chart-4/10 text-chart-4 border-chart-4/20">
-              {activeInfluencers} Influencers
+              💫 {activeInfluencers} Amazing Creators
             </Badge>
           </div>
         </CardContent>

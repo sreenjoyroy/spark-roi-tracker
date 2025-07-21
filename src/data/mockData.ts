@@ -10,7 +10,9 @@ export const mockInfluencers: Influencer[] = [
     platform: 'Instagram',
     email: 'priya.sharma@email.com',
     joinDate: '2023-01-15',
-    status: 'Active'
+    status: 'Active',
+    avatar: 'https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=150&h=150&fit=crop&crop=face',
+    bio: 'Fitness coach passionate about helping women achieve their health goals. Mother of two who believes in balance.'
   },
   {
     id: 'inf_002',
@@ -21,7 +23,9 @@ export const mockInfluencers: Influencer[] = [
     platform: 'YouTube',
     email: 'rohit.mehta@email.com',
     joinDate: '2023-02-20',
-    status: 'Active'
+    status: 'Active',
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face',
+    bio: 'Certified nutritionist sharing science-backed nutrition tips. Former athlete turned health educator.'
   },
   {
     id: 'inf_003',
@@ -32,7 +36,9 @@ export const mockInfluencers: Influencer[] = [
     platform: 'Instagram',
     email: 'asha.gupta@email.com',
     joinDate: '2023-03-10',
-    status: 'Active'
+    status: 'Active',
+    avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b5bb?w=150&h=150&fit=crop&crop=face',
+    bio: 'Yoga instructor and wellness advocate. Sharing mindful living tips for busy professionals.'
   },
   {
     id: 'inf_004',
@@ -43,7 +49,9 @@ export const mockInfluencers: Influencer[] = [
     platform: 'TikTok',
     email: 'vikram.singh@email.com',
     joinDate: '2023-04-05',
-    status: 'Active'
+    status: 'Active',
+    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
+    bio: 'Professional bodybuilder inspiring natural transformation journeys. Your friendly neighborhood fitness guy!'
   },
   {
     id: 'inf_005',
@@ -54,7 +62,22 @@ export const mockInfluencers: Influencer[] = [
     platform: 'Instagram',
     email: 'neha.agarwal@email.com',
     joinDate: '2023-05-12',
-    status: 'Inactive'
+    status: 'Active',
+    avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face',
+    bio: 'Lifestyle blogger sharing real talk about health, wellness, and finding joy in everyday moments.'
+  },
+  {
+    id: 'inf_006',
+    name: 'Arjun Kapoor',
+    category: 'Sports Nutrition',
+    gender: 'Male',
+    followerCount: 198000,
+    platform: 'YouTube',
+    email: 'arjun.kapoor@email.com',
+    joinDate: '2023-06-08',
+    status: 'Active',
+    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face',
+    bio: 'Sports nutritionist helping athletes unlock their potential. Coffee lover and weekend cricket player.'
   }
 ];
 

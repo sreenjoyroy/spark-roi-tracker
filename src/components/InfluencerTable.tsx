@@ -1,9 +1,10 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
-import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { Influencer } from '@/types/influencer';
-import { Users, Instagram, Youtube, Twitter } from 'lucide-react';
+import { Users, Instagram, Youtube, Twitter, Heart, MessageSquare } from 'lucide-react';
 
 interface InfluencerTableProps {
   influencers: Influencer[];
@@ -36,11 +37,11 @@ export const InfluencerTable = ({ influencers }: InfluencerTableProps) => {
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center">
-          <Users className="w-5 h-5 mr-2 text-primary" />
-          Influencer Performance
+          <Heart className="w-5 h-5 mr-2 text-primary" />
+          Our Incredible Creator Family
         </CardTitle>
         <CardDescription>
-          Overview of all influencers and their key metrics
+          Meet the amazing people behind our success - real creators making real impact ✨
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -61,11 +62,19 @@ export const InfluencerTable = ({ influencers }: InfluencerTableProps) => {
                 <TableRow key={influencer.id}>
                   <TableCell>
                     <div className="flex items-center space-x-3">
-                      <Avatar className="w-8 h-8">
-                        <AvatarFallback className="bg-primary/10 text-primary">
-                          {influencer.name.split(' ').map(n => n[0]).join('')}
-                        </AvatarFallback>
-                      </Avatar>
+                      <Tooltip>
+                        <TooltipTrigger>
+                          <Avatar className="w-10 h-10 border-2 border-primary/20">
+                            <AvatarImage src={influencer.avatar} alt={influencer.name} />
+                            <AvatarFallback className="bg-primary/10 text-primary">
+                              {influencer.name.split(' ').map(n => n[0]).join('')}
+                            </AvatarFallback>
+                          </Avatar>
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p className="max-w-xs">{influencer.bio || "Amazing creator in our family!"}</p>
+                        </TooltipContent>
+                      </Tooltip>
                       <div>
                         <div className="font-medium">{influencer.name}</div>
                         <div className="text-sm text-muted-foreground">{influencer.email}</div>
